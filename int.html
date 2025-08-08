@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <div id="heart-canvas"></div>
+
+<div id="corazones-local" style="position: absolute; inset: 0; z-index: 9999; pointer-events: none;"></div>
+
+  <div class="fondo-inicio"></div>
+
+ <div id="bienvenida" class="pantalla-bienvenida">
+  
+   <div class="contenedor-circulo" id="click-area">
+    <!-----TRIANGULO ANIMATION---->  
+    
+    <div class="triangulo izquierda"></div>
+    <div class="triangulo derecha"></div>
+
+
+
+
+  <img id="galleta" class="imagen-galleta" src="asd.png" alt="galleta" />
+
+
+  <audio id="bg-music" >
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  <div class="circulo-bienvenida">
+    <h1 class="linea-superior">NUESTRA</h1>
+    <h1 class="linea-inferior">BODA</h1>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Contenido principal oculto -->
+   <div class="fondo-general"></div> 
+  <div id="contenido-principal" class="contenedor-blanco" style="display: none;">
+    
+  <section class="portada">
+  <div class="contenido-portada" style="text-align: center; padding-top: 80px;">
+<img src="456.jpg" alt="Corazón" style="width: 80px; display: block; margin: 0 auto 5px auto;" class="animar-salto">
+
+<h2 style="font-size: 36px; margin-top: 0;" class="animar-salto">¡QUEREMOS CELEBRARLO CONTIGO!</h2>
+
+
+  </div>
+
+  <div class="countdown">
+  <div class="time">
+    <span id="days">00</span><p>Días</p>
+  </div>
+  <div class="time">
+    <span id="hours">00</span><p>Horas</p>
+  </div>
+  <div class="time">
+    <span id="minutes">00</span><p>Minutos</p>
+  </div>
+  <div class="time">
+    <span id="seconds">00</span><p>Segundos</p>
+  </div>
+</div>
+
+<section class="video-invitacion">
+  <div class="marco-video">
+    <video width="500" height="570" controls autoplay loop muted>
+      <source src="video.mp4" type="video/mp4">
+      Lo sentimos, este navegador no puede mostrar el video.
+    </video>
+  </div>
+</section>
+
+ <section style="text-align: center; padding: 50px 20px;">
+
+
+  <img src="final.jpg" usemap="#mapaEnlaces" alt="Opciones" style="max-width: 555px; width: 100%; border-radius: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+
+  <!-- Mapa de áreas clicables -->
+  <map name="mapaEnlaces">
+
+    <area shape="rect" coords="170,205,250,265" href="https://calendar.google.com/calendar/u/0/r" alt="Fecha" target="_blank">
+  <area shape="rect" coords="170,440,250,500" href="https://wa.me/34643079579" alt="WhatsApp" target="_blank">
+  <area shape="rect" coords="170,350,250,425" href="https://invitacionesdigitales.es/confirmacionalvaroymariana.php" alt="Asistencia" target="_blank">
+  <area shape="rect" coords="170,258,250,318" href="https://maps.app.goo.gl/9RFYLceUfB52oSG67" alt="Maps" target="_blank">
+  <area shape="rect" coords="170,328,250,388" href="https://maps.app.goo.gl/fz3iTsaoAEoqRqpr6" alt="Maps" target="_blank">
+  <area shape="rect" coords="170,527,250,587" href="https://www.elcorteingles.es/listas/bodamas/eventos/nuevo/" alt="Regalos 1" target="_blank">
+ 
+  <area shape="rect" coords="180,700,270,750" href="https://senatipe-my.sharepoint.com/:i:/g/personal/1437971_senati_pe/EUYtTY6rmfZHgQzlcDjyS4gBQX0Roxq25-YW3z6Gwv-fRQ?e=afWyhB" alt="Regalos 3" target="_blank">
+</map>
+
+<footer style="text-align: center; padding: 40px 20px; background: #fff0f5;">
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    style="background: #ff90b3; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; transition: background 0.3s;">
+    ⬆️ Volver arriba
+  </button>
+  <p style="margin-top: 20px; color: #888;">Gracias por acompañarnos 💖</p>
+</footer>
+
+<footer style="background-color: #f4cbbf; padding: 20px 20px; text-align: center;">
+  <p style="font-family: 'Brush Script MT', cursive; font-size: 20px; color: #4d3d39; margin: 0;">
+    Hecho con mucho Amor por
+  </p>
+    <div style="margin-top: 5px; height: 60px;">
+    <img src="logo.png" alt="Invitaciones Digitales" style="height: 60px; transform: scale(3); transform-origin: center;">
+  </div>
+</footer>
+
+
+
+</section>
+
+
+  </div>
+<script src="js/corazones.js"></script>
+  <script src="int.js"></script>
+  
+</body>
+</html>
