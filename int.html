@@ -82,23 +82,85 @@
   </div>
 </section>
 
- <section style="text-align: center; padding: 50px 20px;">
+ <div style="position: relative; max-width: 555px; margin: 0 auto;">
+  <!-- Imagen única -->
+  <img src="final.jpg" usemap="#mapaEnlaces" alt="Opciones" style="width: 100%; border-radius: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
 
-
-  <img src="final.jpg" usemap="#mapaEnlaces" alt="Opciones" style="max-width: 555px; width: 100%; border-radius: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-
-  <!-- Mapa de áreas clicables -->
+  <!-- Mapa ORIGINAL (PC) - COORDENADAS EXACTAS -->
   <map name="mapaEnlaces">
-
+    <!-- Fecha -->
     <area shape="rect" coords="170,205,250,265" href="https://calendar.google.com/calendar/u/0/r" alt="Fecha" target="_blank">
-  <area shape="rect" coords="170,440,250,500" href="https://wa.me/34643079579" alt="WhatsApp" target="_blank">
-  <area shape="rect" coords="170,350,250,425" href="https://invitacionesdigitales.es/confirmacionalvaroymariana.php" alt="Asistencia" target="_blank">
-  <area shape="rect" coords="170,258,250,318" href="https://maps.app.goo.gl/9RFYLceUfB52oSG67" alt="Maps" target="_blank">
-  <area shape="rect" coords="170,328,250,388" href="https://maps.app.goo.gl/fz3iTsaoAEoqRqpr6" alt="Maps" target="_blank">
-  <area shape="rect" coords="170,527,250,587" href="https://www.elcorteingles.es/listas/bodamas/eventos/nuevo/" alt="Regalos 1" target="_blank">
- 
-  <area shape="rect" coords="180,700,270,750" href="https://senatipe-my.sharepoint.com/:i:/g/personal/1437971_senati_pe/EUYtTY6rmfZHgQzlcDjyS4gBQX0Roxq25-YW3z6Gwv-fRQ?e=afWyhB" alt="Regalos 3" target="_blank">
-</map>
+    <!-- WhatsApp -->
+    <area shape="rect" coords="170,440,250,500" href="https://wa.me/34643079579" alt="WhatsApp" target="_blank">
+    <!-- Asistencia -->
+    <area shape="rect" coords="170,350,250,425" href="https://invitacionesdigitales.es/confirmacionalvaroymariana.php" alt="Asistencia" target="_blank">
+    <!-- Maps 1 (Pequeño) -->
+    <area shape="rect" coords="170,258,250,318" href="https://maps.app.goo.gl/9RFYLceUfB52oSG67" alt="Maps" target="_blank">
+    <!-- Maps 2 (Pequeño y pegado al anterior) -->
+    <area shape="rect" coords="170,328,250,388" href="https://maps.app.goo.gl/fz3iTsaoAEoqRqpr6" alt="Maps" target="_blank">
+    <!-- Regalos 1 -->
+    <area shape="rect" coords="170,527,250,587" href="https://www.elcorteingles.es/listas/bodamas/eventos/nuevo/" alt="Regalos 1" target="_blank">
+    <!-- Regalos 3 -->
+    <area shape="rect" coords="180,700,270,750" href="https://senatipe-my.sharepoint.com/:i:/g/personal/1437971_senati_pe/EUYtTY6rmfZHgQzlcDjyS4gBQX0Roxq25-YW3z6Gwv-fRQ?e=afWyhB" alt="Regalos 3" target="_blank">
+  </map>
+
+  <!-- Overlay móvil CON MAPAS PEQUEÑOS Y PEGADOS -->
+  <div class="mobile-overlay">
+    <!-- Fecha -->
+    <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="left: 30.6%; top: 26%; width: 14%; height: 8%;"></a>
+    
+    <!-- Maps 1 y 2 (Pequeños y pegados) -->
+    <a href="https://maps.app.goo.gl/9RFYLceUfB52oSG67" target="_blank" style="left: 30.6%; top: 37%; width: 14%; height: 8%;"></a>
+    <a href="https://maps.app.goo.gl/fz3iTsaoAEoqRqpr6" target="_blank" style="left: 30.6%; top: 43%; width: 14%; height: 8%;"></a>
+    
+    <!-- Asistencia -->
+    <a href="https://invitacionesdigitales.es/confirmacionalvaroymariana.php" target="_blank" style="left: 30.6%; top:47%; width: 14%; height: 10%;"></a>
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/34643079579" target="_blank" style="left: 30.6%; top: 59%; width: 14%; height: 8%;"></a>
+    
+    <!-- Regalos -->
+    <a href="https://www.elcorteingles.es/listas/bodamas/eventos/nuevo/" target="_blank" style="left: 30.6%; top: 67%; width: 14%; height: 8%;"></a>
+  
+
+    <!-- Galeria -->
+    <a href="https://senatipe-my.sharepoint.com/:i:/g/personal/1437971_senati_pe/EUYtTY6rmfZHgQzlcDjyS4gBQX0Roxq25-YW3z6Gwv-fRQ?e=afWyhB" target="_blank" style="left: 30.6%; top: 89%; width: 14%; height: 8%;"></a>
+  </div>
+</div>
+
+<style>
+  /* Ocultar overlay en PC */
+  .mobile-overlay { display: none; }
+
+  /* Mostrar solo en móvil */
+  @media (max-width: 768px) {
+    .mobile-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .mobile-overlay a {
+      position: absolute;
+    }
+    /* Ajuste específico para los mapas */
+    .mobile-overlay a:nth-child(2),
+    .mobile-overlay a:nth-child(3) {
+      height: 4% !important; /* Más pequeños */
+      margin-top: -1%; /* Pegados entre sí */
+    }
+    /* Desactivar map en móvil */
+    area { pointer-events: none; }
+  }
+</style>
+
+
+
+
+
+
 
 <footer style="text-align: center; padding: 40px 20px; background: #fff0f5;">
   <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
